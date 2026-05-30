@@ -45,11 +45,27 @@ a:hover,
     margin: 0 auto;
 }
 
-.brand {
+.brand-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0;
     white-space: nowrap;
+}
+
+.brand {
+    color: var(--muted);
+}
+
+.brand.active-brand {
+    color: var(--ink);
+}
+
+.brand-divider {
+    color: var(--line);
+    font-weight: 400;
 }
 
 .nav-links {
@@ -72,14 +88,47 @@ main {
 
 .hero {
     display: grid;
-    align-items: end;
+    align-content: start;
+    gap: 52px;
     min-height: calc(100vh - 72px);
-    padding: 96px 0 72px;
+    padding: 22px 0 72px;
+}
+
+.hero-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
 }
 
 .hero-content,
 .page-content {
     max-width: 760px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 460px);
+    align-items: start;
+    gap: 56px;
+}
+
+.status-panel {
+    padding-top: 4px;
+}
+
+.status-panel h2 {
+    margin: 0 0 16px;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-align: right;
+}
+
+.status-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .page {
@@ -99,13 +148,13 @@ main {
 h1 {
     max-width: 900px;
     margin: 0;
-    font-size: clamp(48px, 8vw, 104px);
+    font-size: clamp(42px, 5vw, 72px);
     line-height: 0.95;
     letter-spacing: 0;
 }
 
 .page h1 {
-    font-size: clamp(44px, 6vw, 80px);
+    font-size: clamp(34px, 4vw, 52px);
 }
 
 .lead {
@@ -122,11 +171,96 @@ h1 {
     font-size: 18px;
 }
 
+.about-page p,
+.about-page li {
+    text-align: justify;
+}
+
+.page-content h2 {
+    margin: 44px 0 0;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: 0;
+}
+
+.content-list {
+    display: grid;
+    gap: 14px;
+    margin: 24px 0 0;
+    padding-left: 22px;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.content-list li {
+    padding-left: 4px;
+}
+
+.team-list {
+    display: grid;
+    gap: 1px;
+    margin-top: 34px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.team-row {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.9fr) minmax(220px, 1.1fr) minmax(180px, 0.9fr);
+    gap: 28px;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+}
+
+.team-row:first-child {
+    border-top: 0;
+}
+
+.team-header {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.team-member {
+    font-weight: 700;
+}
+
+.team-affiliation {
+    color: var(--muted);
+}
+
+.team-role {
+    color: var(--accent);
+}
+
 .placeholder {
     margin-top: 30px;
     padding: 22px 0;
     color: var(--muted);
     border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.live-figure {
+    margin-top: 34px;
+}
+
+.live-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+}
+
+.figure-caption {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.figure-caption a {
     border-bottom: 1px solid var(--line);
 }
 
@@ -145,11 +279,30 @@ h1 {
 }
 
 .site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     width: min(1120px, calc(100% - 40px));
     margin: 0 auto;
     padding: 24px 0 36px;
     color: var(--muted);
     font-size: 14px;
+}
+
+.redirect-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    color: var(--muted);
+}
+
+.redirect-page a {
+    border-bottom: 1px solid var(--line);
+}
+
+.footer-note a {
+    border-bottom: 1px solid var(--line);
 }
 
 @media (max-width: 780px) {
@@ -162,6 +315,21 @@ h1 {
 
     .nav-links {
         justify-content: flex-start;
+    }
+
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .team-row {
+        grid-template-columns: 1fr;
+        gap: 2px;
     }
 
     .hero,
