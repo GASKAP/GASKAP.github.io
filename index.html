@@ -1,11 +1,317 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>GASKAP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GASKAP-HI: neutral hydrogen science from the Galactic ASKAP Spectral Line Survey.">
+    <title>GASKAP-HI</title>
+    <style>
+        :root {
+            --ink: #111111;
+            --muted: #666666;
+            --line: #e8e8e8;
+            --soft: #f7f7f7;
+            --accent: #176b87;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            width: min(1120px, calc(100% - 40px));
+            min-height: 72px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 10px 22px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        main {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .hero {
+            display: grid;
+            align-items: end;
+            min-height: calc(100vh - 72px);
+            padding: 96px 0 72px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            margin: 0 0 18px;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 900px;
+            margin: 0;
+            font-size: clamp(48px, 8vw, 104px);
+            line-height: 0.95;
+            letter-spacing: 0;
+        }
+
+        .lead {
+            max-width: 660px;
+            margin: 28px 0 0;
+            color: var(--muted);
+            font-size: clamp(18px, 2vw, 24px);
+            line-height: 1.45;
+        }
+
+        .section {
+            display: grid;
+            grid-template-columns: minmax(160px, 240px) minmax(0, 1fr);
+            gap: 56px;
+            padding: 72px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section h2 {
+            margin: 0;
+            font-size: 18px;
+            letter-spacing: 0;
+        }
+
+        .section-body {
+            max-width: 760px;
+        }
+
+        .section-body p {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .section-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .link-list {
+            display: grid;
+            gap: 14px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .link-list a {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .placeholder {
+            padding: 22px 0;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .site-footer {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 36px 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 780px) {
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 14px;
+                padding: 18px 0;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 72px 0 56px;
+            }
+
+            .section {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                padding: 48px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>GASKAP</h1>
-    <p>Galactic ASKAP Spectral Line Survey</p>
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="brand" href="#home">GASKAP-HI</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#science">Science</a></li>
+                <li><a href="#data">Data</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#wiki">Wiki</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">Galactic ASKAP Spectral Line Survey</p>
+                <h1>GASKAP-HI</h1>
+                <p class="lead">
+                    A minimal project home for neutral hydrogen observations,
+                    data products, science updates, and collaboration resources.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <h2>About</h2>
+            <div class="section-body">
+                <p>
+                    GASKAP-HI focuses on neutral hydrogen science from ASKAP,
+                    tracing Galactic structure, gas dynamics, and the interstellar
+                    medium at high angular resolution.
+                </p>
+                <p>
+                    This site is inspired by the clear, astronomy-focused structure
+                    of the POSSUM survey website. Images and richer visual material
+                    can be added later.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="team">
+            <h2>Team</h2>
+            <div class="section-body">
+                <p>
+                    A place for the GASKAP-HI team, collaborators, and working
+                    groups.
+                </p>
+                <div class="placeholder">Team details coming soon.</div>
+            </div>
+        </section>
+
+        <section class="section" id="science">
+            <h2>Science</h2>
+            <div class="section-body">
+                <p>
+                    Science themes include Galactic HI emission, absorption,
+                    cold neutral medium studies, cloud structure, and links
+                    between atomic gas and star formation.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="data">
+            <h2>Data</h2>
+            <div class="section-body">
+                <p>
+                    Data releases, documentation, products, and access links
+                    will be listed here as they become available.
+                </p>
+                <div class="placeholder">Data release information coming soon.</div>
+            </div>
+        </section>
+
+        <section class="section" id="publications">
+            <h2>Publications</h2>
+            <div class="section-body">
+                <p>
+                    Key papers, survey descriptions, technical notes, and related
+                    publications will be collected here.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="wiki">
+            <h2>Wiki</h2>
+            <div class="section-body">
+                <p>
+                    Internal notes, observing information, pipeline references,
+                    and collaboration resources can be linked from this section.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <div class="section-body">
+                <ul class="link-list">
+                    <li><a href="mailto:contact@example.org">contact@example.org</a></li>
+                    <li><a href="https://possum-survey.org/">Inspired by the POSSUM survey website</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>GASKAP-HI</span>
+    </footer>
 </body>
 </html>
