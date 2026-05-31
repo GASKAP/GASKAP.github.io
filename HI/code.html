@@ -28,9 +28,35 @@
         </nav>
     </header>
 
-    <main class="page">
+    <main class="page code-page">
         <div class="page-content">
             <h1>Code</h1>
+            <h2>IViS</h2>
+            <p>
+                IViS (Interferometric Visibility-domain Inversion Software)
+                is a fast, GPU-accelerated non-linear deconvolution tool for
+                radio interferometry. It is designed for large mosaics and
+                hyperspectral cubes, with a focus on lowering the energy
+                footprint of large imaging tasks.
+            </p>
+            <p>
+                IViS was developed in the context of GASKAP-HI as a
+                complementary imaging software to ASKAPSoft for producing
+                emission cubes. Its regularized, MEM-like framework is
+                especially suited to diffuse emission, and currently supports
+                joint deconvolution through image-plane mosaicking with
+                direction-dependent primary-beam effects.
+            </p>
+            <p>
+                IViS is a generic, flexible framework for developing new
+                deconvolution methods and is compatible with MeasurementSet v2
+                data.
+            </p>
+            <ul class="link-list">
+                <li><a href="https://ivis-dev.readthedocs.io/en/latest/">IViS documentation</a></li>
+                <li><a href="https://github.com/antoinemarchal/ivis">IViS GitHub repository</a></li>
+            </ul>
+            <pre><code>uv pip install "ivis[gpu] @ git+https://github.com/antoinemarchal/ivis.git"</code></pre>
         </div>
     </main>
 </body>

@@ -379,6 +379,14 @@ h1 {
     text-align: justify;
 }
 
+.code-page p {
+    text-align: justify;
+}
+
+.data-page p {
+    text-align: justify;
+}
+
 .about-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(220px, 290px);
@@ -499,6 +507,21 @@ h1 {
 
 .link-list a {
     border-bottom: 1px solid var(--line);
+}
+
+pre {
+    margin: 28px 0 0;
+    padding: 16px;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    background: #f7f7f7;
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 .publication-grid {
