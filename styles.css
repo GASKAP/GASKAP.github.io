@@ -171,6 +171,14 @@ h1 {
     font-size: 18px;
 }
 
+.publications-content {
+    max-width: 100%;
+}
+
+.publications-content > p {
+    max-width: 760px;
+}
+
 .about-page p,
 .about-page li {
     text-align: justify;
@@ -278,6 +286,49 @@ h1 {
     border-bottom: 1px solid var(--line);
 }
 
+.publication-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 34px;
+}
+
+.publication-tile {
+    display: grid;
+    gap: 10px;
+}
+
+.publication-tile img,
+.publication-image-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 1;
+    border: 1px solid var(--line);
+    background: #f7f7f7;
+    color: var(--muted);
+    font-size: 14px;
+    object-fit: cover;
+    transition: border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.publication-tile:hover img,
+.publication-tile:hover .publication-image-placeholder {
+    border-color: var(--accent);
+    opacity: 0.35;
+    transform: translateY(-2px);
+}
+
+.publication-title {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.publication-tile:hover .publication-title {
+    color: var(--accent);
+}
+
 .site-footer {
     display: flex;
     align-items: center;
@@ -336,5 +387,9 @@ h1 {
     .page {
         min-height: auto;
         padding: 72px 0 56px;
+    }
+
+    .publication-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
