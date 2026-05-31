@@ -379,6 +379,26 @@ h1 {
     text-align: justify;
 }
 
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 290px);
+    align-items: start;
+    gap: 56px;
+}
+
+.about-figure {
+    position: sticky;
+    top: 112px;
+    margin: 0;
+}
+
+.about-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+}
+
 .page-content h2 {
     margin: 44px 0 0;
     font-size: 22px;
@@ -571,6 +591,16 @@ h1 {
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 42px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .about-figure {
+        position: static;
+        max-width: 360px;
     }
 
     .team-row {
