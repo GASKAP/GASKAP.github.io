@@ -33,11 +33,97 @@
         <div class="page-content publications-content">
             <h1>Publications</h1>
 
-            <div class="publication-grid" aria-label="Publication links">
-                <a class="publication-tile" href="https://ui.adsabs.harvard.edu/abs/2026MNRAS.549ag863D/abstract" target="_blank" rel="noopener">
+            <section class="publication-summary" aria-label="Publication summary">
+                <div class="publication-chart" aria-labelledby="publication-chart-title">
+                    <div class="publication-chart-header">
+                        <h2 id="publication-chart-title">Publications per Year</h2>
+                        <span>20 total</span>
+                    </div>
+                    <ul class="publication-chart-legend" aria-label="Science-lane color key">
+                        <li><span class="legend-swatch survey-methods"></span>Survey + methods</li>
+                        <li><span class="legend-swatch cold-gas"></span>Cold gas census + absorption</li>
+                        <li><span class="legend-swatch magellanic-environment"></span>Magellanic environment</li>
+                        <li><span class="legend-swatch dynamics-feedback"></span>Dynamics + feedback</li>
+                        <li><span class="legend-swatch ism-physics"></span>ISM physics</li>
+                    </ul>
+                    <ol class="publication-histogram" aria-label="Number of GASKAP-HI publications by year">
+                        <li class="publication-bar-item" style="--count: 1;" aria-label="2013: 1 publication">
+                            <span class="publication-bar-count">1</span>
+                            <span class="publication-bar">
+                                <span class="publication-bar-segment survey-methods" style="--segment-count: 1;"></span>
+                            </span>
+                            <span class="publication-bar-year">2013</span>
+                        </li>
+                        <li class="publication-bar-item" style="--count: 1;" aria-label="2018: 1 publication">
+                            <span class="publication-bar-count">1</span>
+                            <span class="publication-bar">
+                                <span class="publication-bar-segment dynamics-feedback" style="--segment-count: 1;"></span>
+                            </span>
+                            <span class="publication-bar-year">2018</span>
+                        </li>
+                        <li class="publication-bar-item" style="--count: 2;" aria-label="2019: 2 publications">
+                            <span class="publication-bar-count">2</span>
+                            <span class="publication-bar">
+                                <span class="publication-bar-segment ism-physics" style="--segment-count: 1;"></span>
+                                <span class="publication-bar-segment dynamics-feedback" style="--segment-count: 1;"></span>
+                            </span>
+                            <span class="publication-bar-year">2019</span>
+                        </li>
+                        <li class="publication-bar-item" style="--count: 3;" aria-label="2022: 3 publications">
+                            <span class="publication-bar-count">3</span>
+                            <span class="publication-bar">
+                                <span class="publication-bar-segment cold-gas" style="--segment-count: 2;"></span>
+                                <span class="publication-bar-segment survey-methods" style="--segment-count: 1;"></span>
+                            </span>
+                            <span class="publication-bar-year">2022</span>
+                        </li>
+                        <li class="publication-bar-item" style="--count: 2;" aria-label="2023: 2 publications">
+                            <span class="publication-bar-count">2</span>
+                            <span class="publication-bar">
+                                <span class="publication-bar-segment ism-physics" style="--segment-count: 2;"></span>
+                            </span>
+                            <span class="publication-bar-year">2023</span>
+                        </li>
+                        <li class="publication-bar-item" style="--count: 2;" aria-label="2024: 2 publications">
+                            <span class="publication-bar-count">2</span>
+                            <span class="publication-bar">
+                                <span class="publication-bar-segment dynamics-feedback" style="--segment-count: 1;"></span>
+                                <span class="publication-bar-segment cold-gas" style="--segment-count: 1;"></span>
+                            </span>
+                            <span class="publication-bar-year">2024</span>
+                        </li>
+                        <li class="publication-bar-item" style="--count: 7;" aria-label="2025: 7 publications">
+                            <span class="publication-bar-count">7</span>
+                            <span class="publication-bar">
+                                <span class="publication-bar-segment ism-physics" style="--segment-count: 2;"></span>
+                                <span class="publication-bar-segment dynamics-feedback" style="--segment-count: 1;"></span>
+                                <span class="publication-bar-segment magellanic-environment" style="--segment-count: 2;"></span>
+                                <span class="publication-bar-segment cold-gas" style="--segment-count: 1;"></span>
+                                <span class="publication-bar-segment survey-methods" style="--segment-count: 1;"></span>
+                            </span>
+                            <span class="publication-bar-year">2025</span>
+                        </li>
+                        <li class="publication-bar-item" style="--count: 2;" aria-label="2026: 2 publications">
+                            <span class="publication-bar-count">2</span>
+                            <span class="publication-bar">
+                                <span class="publication-bar-segment dynamics-feedback" style="--segment-count: 1;"></span>
+                                <span class="publication-bar-segment cold-gas" style="--segment-count: 1;"></span>
+                            </span>
+                            <span class="publication-bar-year">2026</span>
+                        </li>
+                    </ol>
+                </div>
+                <a class="latest-publication-highlight" href="https://ui.adsabs.harvard.edu/abs/2026MNRAS.549ag863D/abstract" target="_blank" rel="noopener" aria-label="Latest publication: Dempsey et al. 2026">
                     <img src="https://arxiv.org/html/2605.04632v1/x1.png" alt="Figure from Dempsey et al. 2026">
-                    <span class="publication-title"><strong>Dempsey et al. 2026</strong><br>Cold skeleton of the Magellanic Clouds with ASKAP</span>
+                    <span class="latest-publication-copy">
+                        <span>Read our latest work</span>
+                        <strong>Dempsey et al. 2026</strong>
+                        <span>Cold skeleton of the Magellanic Clouds with ASKAP</span>
+                    </span>
                 </a>
+            </section>
+
+            <div class="publication-grid" aria-label="Publication links">
                 <a class="publication-tile" href="https://ui.adsabs.harvard.edu/abs/2026ApJ...997...50P/abstract" target="_blank" rel="noopener">
                     <img src="https://arxiv.org/html/2512.09035/x1.png" alt="Figure from Park et al. 2026">
                     <span class="publication-title"><strong>Park et al. 2026</strong><br>High-resolution CNM around 30 Doradus</span>
