@@ -56,7 +56,7 @@ a:hover,
 }
 
 .brand {
-    color: var(--muted);
+    color: #8a8f93;
 }
 
 .brand.active-brand {
@@ -102,6 +102,23 @@ main {
     object-fit: cover;
 }
 
+.hero-banner-figure {
+    margin: 0;
+}
+
+.hero-banner-figure figcaption {
+    width: 100%;
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.25;
+    text-align: right;
+}
+
+.hero-banner-figure a {
+    border-bottom: 1px solid var(--line);
+}
+
 .hero-content,
 .page-content {
     max-width: 760px;
@@ -109,9 +126,9 @@ main {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(340px, 460px);
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 520px);
     align-items: start;
-    gap: 56px;
+    gap: 48px;
 }
 
 .status-panel {
@@ -131,8 +148,45 @@ main {
     height: auto;
 }
 
+.status-panel .home-figure img {
+    max-height: 490px;
+    object-fit: contain;
+}
+
 .home-figure {
     margin: 0;
+}
+
+.survey-status-note {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.home-askap-photo {
+    width: min(1120px, calc(100% - 40px));
+    margin: 8px auto 0;
+}
+
+.home-askap-photo img {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+}
+
+.home-askap-photo figcaption {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.home-askap-photo a {
+    border-bottom: 1px solid var(--line);
 }
 
 .data-status {
@@ -790,6 +844,10 @@ code {
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 42px;
+    }
+
+    .survey-status-note {
+        white-space: normal;
     }
 
     .about-layout {
