@@ -660,6 +660,22 @@ h1 {
     border-bottom: 1px solid var(--line);
 }
 
+.team-page {
+    max-width: none;
+}
+
+.team-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    align-items: start;
+    gap: 36px;
+    margin-top: 34px;
+}
+
+.team-layout .team-list {
+    margin-top: 0;
+}
+
 .team-row {
     display: grid;
     grid-template-columns: minmax(180px, 0.9fr) minmax(220px, 1.1fr) minmax(180px, 0.9fr);
@@ -688,7 +704,91 @@ h1 {
 }
 
 .team-role {
-    color: var(--accent);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.role-tag {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 24px;
+    padding: 3px 8px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.role-pi {
+    color: #0f4c5c;
+    background: #d8f0f2;
+    border-color: #9fd4da;
+}
+
+.role-data {
+    color: #4c3a05;
+    background: #f7e7b2;
+    border-color: #dfc56a;
+}
+
+.role-turbulence {
+    color: #5a2510;
+    background: #f7d4c2;
+    border-color: #e8a381;
+}
+
+.role-filament {
+    color: #163f2b;
+    background: #d6ecd9;
+    border-color: #9ecfaa;
+}
+
+.role-decomposition {
+    color: #482b67;
+    background: #eadcf6;
+    border-color: #c6a8df;
+}
+
+.role-absorption {
+    color: #103d68;
+    background: #d9e9fb;
+    border-color: #a7c8eb;
+}
+
+.role-pm {
+    color: #5d2240;
+    background: #f4d8e8;
+    border-color: #dfa8c8;
+}
+
+.role-steering {
+    color: #3f4145;
+    background: #eceff1;
+    border-color: #c9ced3;
+}
+
+.team-legend {
+    position: sticky;
+    top: 104px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+}
+
+.team-legend h2 {
+    flex-basis: 100%;
+    margin: 0 0 2px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
 
 .placeholder {
@@ -853,6 +953,15 @@ code {
     .about-layout {
         grid-template-columns: 1fr;
         gap: 34px;
+    }
+
+    .team-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .team-legend {
+        position: static;
     }
 
     .about-figure {
